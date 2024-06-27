@@ -10,14 +10,14 @@
         public bool EhRefrigeracao { get; set; }
         public bool EhVolume { get; set; }
 
-        public Item(double custo, int validade, bool necessitaRefrigeracao = false, double? custoRefrigeracao = null,
-            bool volumoso = false, double? volume = null, double? custoPorVolume = null)
+        public Item(double custo, int validade, bool ehRefrigeracao = false, double? custoRefrigeracao = null,
+            bool ehVolume = false, double? volume = null, double? custoPorVolume = null)
         {
             Custo = custo;
             Validade = validade;
-            EhRefrigeracao = necessitaRefrigeracao;
+            EhRefrigeracao = ehRefrigeracao;
             CustoRefrigeracao = custoRefrigeracao;
-            EhVolume = volumoso;
+            EhVolume = ehVolume;
             Volume = volume;
             CustoPorVolume = custoPorVolume;
         }
