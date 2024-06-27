@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using HiperMercado;
+
+Item itemComum = new Item(20.0, 20);
+double precoItemComum = CalculadoraPreco.CalcularPrecoPelaFormulaMagica(itemComum);
+
+Console.WriteLine($"Preço item comum: {precoItemComum}");
