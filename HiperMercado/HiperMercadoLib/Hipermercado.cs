@@ -1,4 +1,4 @@
-﻿namespace HiperMercado
+﻿namespace HiperMercado.HiperMercadoLib
 {
     public static class Hi
     {

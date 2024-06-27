@@ -1,4 +1,6 @@
-﻿namespace HiperMercado
+﻿using HiperMercado.TiposDeCalculos.Interface;
+
+namespace HiperMercado.TiposDeCalculos
 {
     public class FabricaDeCalculoCusto
     {
@@ -7,16 +9,16 @@
 
             if (item.EhRefrigeracao)
             {
-                return new CalculadoraCustoRefrigeracao();
+                return new CalculoCustoRefrigeracao();
             }
 
             else if (item.EhVolume)
             {
-                return new CalculadoraCustoVolume();
+                return new CalculoCustoVolume();
             }
             else
             {
-                return new CalcularCustoComum();
+                return new CalculoCustoComum();
             }
         }
     }

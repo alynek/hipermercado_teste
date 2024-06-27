@@ -1,4 +1,4 @@
-﻿namespace HiperMercado
+﻿namespace HiperMercado.TiposDeCalculos.Interface
 {
     public interface ICalculadoraCusto
     {
