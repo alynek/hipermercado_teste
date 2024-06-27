@@ -396,3 +396,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/HiperMercado/obj/
+/HiperMercado/obj/Debug/net8.0/HiperMercado.AssemblyInfoInputs.cache
