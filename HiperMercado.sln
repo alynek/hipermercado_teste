@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiperMercado", "HiperMercado\HiperMercado.csproj", "{9FC01B02-58BE-48BC-9CE1-516D4DEC1165}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiperMercado", "HiperMercado\HiperMercado.csproj", "{9FC01B02-58BE-48BC-9CE1-516D4DEC1165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteUnidades", "CalculoCustoTests\TesteUnidades.csproj", "{FD31F47E-01D2-452D-BD77-158476F8D92B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9FC01B02-58BE-48BC-9CE1-516D4DEC1165}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FC01B02-58BE-48BC-9CE1-516D4DEC1165}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FC01B02-58BE-48BC-9CE1-516D4DEC1165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD31F47E-01D2-452D-BD77-158476F8D92B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD31F47E-01D2-452D-BD77-158476F8D92B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD31F47E-01D2-452D-BD77-158476F8D92B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD31F47E-01D2-452D-BD77-158476F8D92B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
