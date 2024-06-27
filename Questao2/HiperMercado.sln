@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiperMercado", "HiperMercado\HiperMercado.csproj", "{9FC01B02-58BE-48BC-9CE1-516D4DEC1165}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteUnidades", "CalculoCustoTests\TesteUnidades.csproj", "{FD31F47E-01D2-452D-BD77-158476F8D92B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteUnidades", "CalculoCustoTests\TesteUnidades.csproj", "{FD31F47E-01D2-452D-BD77-158476F8D92B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
