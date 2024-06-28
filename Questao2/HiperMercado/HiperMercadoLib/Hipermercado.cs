@@ -2,7 +2,7 @@
 {
     public static class Hi
     {
-        //Código simulando lib
+        //Código simulando lib, apenas para retonar um valor
         public static double formulaMagica(double custo, int validade)
         {
             return custo + validade;
