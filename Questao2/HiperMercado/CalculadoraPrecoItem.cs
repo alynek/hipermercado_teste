@@ -1,5 +1,5 @@
 ﻿using HiperMercado.HiperMercadoLib;
-using HiperMercado.TiposDeCalculos;
+using HiperMercado.TiposDeItems;
 
 namespace HiperMercado
 {
@@ -7,10 +7,9 @@ namespace HiperMercado
     {
         public double CalcularPreco(Item item)
         {
-            var tipoDeCalculoCusto = FabricaDeCalculoCusto.CriarCalculoCusto(item);
-            var custoTotal = tipoDeCalculoCusto.CalcularCusto(item);
+            var custoTotalItem = item.CalcularCusto();
 
-            double preco = Hi.formulaMagica(custoTotal, item.Validade);
+            double preco = Hi.formulaMagica(custoTotalItem, item.Validade);
             return preco;
         }
     }
