@@ -18,33 +18,38 @@ var casas = new List<Casa>
     new() { Rua = ruaPortoReal, Numero = 3, TotalEleitores = 500 }
 };
 
-var resultado = RetornaAsRuasOrdenadasPelaQuantidadeDeEleitores(casas);
+var resultado = ProcessaAlgoritmo.RetornaAsRuasOrdenadasPelaQuantidadeDeEleitores(casas);
 
 resultado.ForEach(_ => Console.WriteLine($"Rua: {_.Nome}"));
 
-List<Rua> RetornaAsRuasOrdenadasPelaQuantidadeDeEleitores(List<Casa> casas)
+public static class ProcessaAlgoritmo
 {
-    var quantidadeEleitoresRuas = new Dictionary<Rua, int>();
-
-    casas.ForEach(_ =>
+    public static List<Rua> RetornaAsRuasOrdenadasPelaQuantidadeDeEleitores(List<Casa> casas)
     {
-        if (quantidadeEleitoresRuas.ContainsKey(_.Rua))
-        {
-            quantidadeEleitoresRuas[_.Rua] += _.TotalEleitores;
-        }
-        else
-        {
-            quantidadeEleitoresRuas[_.Rua] = _.TotalEleitores;
-        }
-    });
+        var quantidadeEleitoresRuas = new Dictionary<Rua, int>();
 
-    var ruasOrdenadasPelosEleitores = quantidadeEleitoresRuas
-       .OrderByDescending(chave => chave.Value)
-       .Select(chave => chave.Key)
-       .ToList();
+        casas.ForEach(_ =>
+        {
+            if (quantidadeEleitoresRuas.ContainsKey(_.Rua))
+            {
+                quantidadeEleitoresRuas[_.Rua] += _.TotalEleitores;
+            }
+            else
+            {
+                quantidadeEleitoresRuas[_.Rua] = _.TotalEleitores;
+            }
+        });
 
-    return ruasOrdenadasPelosEleitores;
+        var ruasOrdenadasPelosEleitores = quantidadeEleitoresRuas
+           .OrderByDescending(chave => chave.Value)
+           .ThenBy(kvp => kvp.Key.Nome)
+           .Select(chave => chave.Key)
+           .ToList();
+
+        return ruasOrdenadasPelosEleitores;
+    }
 }
+
 
 public class Casa { 
     public Rua Rua { get; set; }
@@ -56,6 +61,11 @@ public class Rua
 {
     public string Cep { get; set; }
     public string Nome { get; set; }
+
+    public override bool Equals(object obj)
+    {
+        return obj is Rua rua && Cep == rua.Cep && Nome == rua.Nome;
+    }
 
     public override int GetHashCode()
     {
