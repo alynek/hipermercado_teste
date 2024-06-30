@@ -75,7 +75,7 @@ Um apossível abordagem no .NET é usar transaction, com isso podemos envoolver 
 
 ### Questão 6) Link do Github com as querys de criação, inserção e consulta: https://github.com/alynek/hipermercado_teste/tree/branchUsandoClasseBase/Questao6
 
-Nessa questão, observei que era importante ter uma coluna a mais chamada: QuantidadeMaximaKits, afinal, o que forma um kit é:
+Nessa questão, observei que era importante ter uma coluna a mais na consulta que retorna os kits, chamada: QuantidadeMaximaKits, afinal, o que forma um kit é:
 
 1 produto de limpeza que foi bem avaliado + 1 alimento próximo do vencimento
 
