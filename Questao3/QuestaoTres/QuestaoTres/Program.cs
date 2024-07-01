@@ -42,7 +42,7 @@ public static class ProcessaAlgoritmo
 
         var ruasOrdenadasPelosEleitores = quantidadeEleitoresRuas
            .OrderByDescending(chave => chave.Value)
-           .ThenBy(kvp => kvp.Key.Nome)
+           .ThenBy(chave => chave.Key.Nome)
            .Select(chave => chave.Key)
            .ToList();
 
