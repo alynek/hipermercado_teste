@@ -33,11 +33,9 @@ que pode ser chamada após a pagamentoService, para enviar um e-mail avisando o 
 *Exemplo de uma CarrinhoController:*
 ![delegacao de objetos](https://github.com/alynek/hipermercado_teste/assets/79387967/186301d9-7cdb-4908-9552-42f785e3d685)
 
-### Questão 2) Link do Github com o código:
-https://github.com/alynek/hipermercado_teste/tree/branchUsandoClasseBase/Questao2
+### Questão 2) Link do Github com o código: https://github.com/alynek/hipermercado_teste/tree/branchUsandoClasseBase/Questao2
 
-### Questão 3) Link do Github com o código:
-https://github.com/alynek/hipermercado_teste/tree/branchUsandoClasseBase/Questao3/QuestaoTres
+### Questão 3) Link do Github com o código: https://github.com/alynek/hipermercado_teste/tree/branchUsandoClasseBase/Questao3/QuestaoTres
 
 ### Questão 4) 
 
@@ -73,3 +71,40 @@ Um apossível abordagem no .NET é usar transaction, com isso podemos envoolver 
 
 *No entity framework também temos a abordagem de utilizar alguns métodos do próprio framework, abaixo um exempo simples:*
 ![commit](https://github.com/alynek/hipermercado_teste/assets/79387967/da750462-51ae-48ba-87df-85ba919d52b3)
+
+
+### Questão 6) Link do Github com as querys de criação, inserção e consulta: https://github.com/alynek/hipermercado_teste/tree/branchUsandoClasseBase/Questao6
+
+Nessa questão, observei que era importante ter uma coluna a mais na consulta que retorna os kits, chamada: QuantidadeMaximaKits, afinal, o que forma um kit é:
+
+1 produto de limpeza que foi bem avaliado + 1 alimento próximo do vencimento
+
+![image](https://github.com/alynek/hipermercado_teste/assets/79387967/b0acaf5c-4e62-4226-989e-38707184408e)
+
+Logo na quantidade máxima de kits que eu posso montar,  deve ser levado em consideração a menor quantiade de um produto que "cria" um kit, por exemplo:
+
+Supondo que eu tenho um total de 
+ - 80 quantidades de carne
+ - 100 quantidades de detergentes
+ - 100 quantidades de sabão em pó
+
+Eu posso criar as seguintes combinações:
+ - Possível kit 1: 80 kits, cada um com: 1 carne +  1 detergente
+ - Possível kit 2: 80 kits, cada um com: 1 carne +  1 sabão em pó
+
+ A escolha de cada kit, poderia ser algo como: **20 kit's 1 + 60 kit's 2**   
+ ou   **1 kit 1 + 79 kit's 2**
+
+
+*Abaixo se encontra o resultado final da query:*
+
+![image](https://github.com/alynek/hipermercado_teste/assets/79387967/a384d1b8-77ba-43ed-910a-42c6317d6f08)
+
+
+
+*E aqui estão os dados de etodas as tabelas:*
+
+![image](https://github.com/alynek/hipermercado_teste/assets/79387967/4ace41a2-02c4-4453-9526-3879bbc053f1)
+
+
+
