@@ -19,7 +19,7 @@ eu uso injeção de dependência, chamando a interface da minha service, isso de
 preciso instanciar uma classe externa nela, melhorando a manutenibilidade, os testes também ficam mais fáceis e sem falar que é 
 uma boa prática e deixa a controller com um melhor design (no sentido de refatoração, design de código).
 
-*Exemplo de injeção de dependência em uma Controller:*
+*Exemplo de uma interface sendo chamada em uma controller, usando injeção de dependência:*
 ```
   public class FinalizaCompraController : ControllerBase
     {
