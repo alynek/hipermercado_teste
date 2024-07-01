@@ -1,4 +1,4 @@
--- Verifica se o banco de dados existe antes de cri·-lo
+-- Cria banco Hipermercado
 IF NOT EXISTS (SELECT 1 FROM sys.databases WHERE name = 'Hipermercado')
 BEGIN
     CREATE DATABASE Hipermercado;
@@ -6,7 +6,7 @@ BEGIN
 END
 ELSE
 BEGIN
-    PRINT 'O banco de dados Hipermercado j· existe.';
+    PRINT 'O banco de dados Hipermercado j√° existe.';
 END
 GO
 
@@ -14,22 +14,7 @@ GO
 USE Hipermercado;
 GO
 
--- Verifica e cria a tabela TipoProduto se n„o existir
-IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'TipoProduto')
-BEGIN
-    CREATE TABLE TipoProduto (
-        Id INT IDENTITY(1,1) PRIMARY KEY,
-        Tipo VARCHAR(50) NOT NULL UNIQUE
-    );
-    PRINT 'Tabela TipoProduto criada com sucesso.';
-END
-ELSE
-BEGIN
-    PRINT 'A tabela TipoProduto j· existe.';
-END
-GO
-
--- Verifica e cria a tabela ElementoEstoque se n„o existir
+-- Cria a tabela ElementoEstoque 
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'ElementoEstoque')
 BEGIN
     CREATE TABLE ElementoEstoque (
@@ -42,11 +27,11 @@ BEGIN
 END
 ELSE
 BEGIN
-    PRINT 'A tabela ElementoEstoque j· existe.';
+    PRINT 'A tabela ElementoEstoque j√° existe.';
 END
 GO
 
--- Verifica e cria a tabela Estoque se n„o existir
+-- Cria a tabela Estoque 
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'Estoque')
 BEGIN
     CREATE TABLE Estoque (
@@ -59,11 +44,11 @@ BEGIN
 END
 ELSE
 BEGIN
-    PRINT 'A tabela Estoque j· existe.';
+    PRINT 'A tabela Estoque j√° existe.';
 END
 GO
 
--- Verifica e cria a tabela Alimento se n„o existir
+-- Cria a tabela Alimento
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'Alimento')
 BEGIN
     CREATE TABLE Alimento (
@@ -78,11 +63,11 @@ BEGIN
 END
 ELSE
 BEGIN
-    PRINT 'A tabela Alimento j· existe.';
+    PRINT 'A tabela Alimento j√° existe.';
 END
 GO
 
--- Verifica e cria a tabela ProdutoLimpeza se n„o existir
+-- Cria a tabela ProdutoLimpeza 
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'ProdutoLimpeza')
 BEGIN
     CREATE TABLE ProdutoLimpeza (
@@ -97,11 +82,11 @@ BEGIN
 END
 ELSE
 BEGIN
-    PRINT 'A tabela ProdutoLimpeza j· existe.';
+    PRINT 'A tabela ProdutoLimpeza j√° existe.';
 END
 GO
 
--- Verifica e cria a tabela PesquisaMercado se n„o existir
+-- Cria a tabela PesquisaMercado 
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'PesquisaMercado')
 BEGIN
     CREATE TABLE PesquisaMercado (
@@ -115,6 +100,6 @@ BEGIN
 END
 ELSE
 BEGIN
-    PRINT 'A tabela PesquisaMercado j· existe.';
+    PRINT 'A tabela PesquisaMercado j√° existe.';
 END
 GO

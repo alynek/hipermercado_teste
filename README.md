@@ -88,7 +88,7 @@ Supondo que eu tenho um total de
  - 100 quantidades de detergentes
  - 100 quantidades de sabão em pó
 
-Eu posso criar as seguintes combinações:
+Eu só posso criar as seguintes combinações, porque a menor quantidade de produtos é 80, ou seja, eu não poderia montar 100 kits de detergentes sendo que tenho apenas 80 carnes:
  - Possível kit 1: 80 kits, cada um com: 1 carne +  1 detergente
  - Possível kit 2: 80 kits, cada um com: 1 carne +  1 sabão em pó
 
