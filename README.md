@@ -93,9 +93,12 @@ Na linha 1, estamos fazendo a operação de debitar da conta, isso faz com que o
 Um apossível abordagem no .NET é usar transaction, com isso podemos envoolver a lógica de debitar e atualizar e etc, dentro de uma cláusula TransactionScope, exemplo abaixo:
 
 *Agora os métodos Debite e Atualiza, estão dentro de uma cláusula TransacationScope,onde no final da operação Atualiza, é que de fato completamos a operação*
+
 ![transaction](https://github.com/alynek/hipermercado_teste/assets/79387967/7d8345c6-f2c2-406c-91fe-d896e342bac8)
 
+
 *No entity framework também temos a abordagem de utilizar alguns métodos do próprio framework, abaixo um exempo simples:*
+
 ![commit](https://github.com/alynek/hipermercado_teste/assets/79387967/da750462-51ae-48ba-87df-85ba919d52b3)
 
 
