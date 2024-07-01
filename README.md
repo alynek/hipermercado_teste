@@ -61,7 +61,7 @@ que pode ser chamada após a pagamentoService, para enviar um e-mail avisando o 
 
 ### Questão 2) Link do Github com o código: https://github.com/alynek/hipermercado_teste/tree/branchUsandoClasseBase/Questao2
 
-Uma segunda abordagem resolvendo o mesmo problema, mas usando o padrão strategy, se encontra na branch main.
+Uma segunda abordagem para a questão 2 resolvendo o mesmo problema, mas usando o padrão strategy, se encontra na branch main: https://github.com/alynek/hipermercado_teste/tree/main/Questao2
 
 ### Questão 3) Link do Github com o código: https://github.com/alynek/hipermercado_teste/tree/branchUsandoClasseBase/Questao3/QuestaoTres
 
