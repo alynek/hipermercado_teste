@@ -86,7 +86,8 @@ Um exemplo da vida real (vou omitir a maioria dos detalhes específicos e técni
 
 **Sobre escopo de transações**, este também anda “de mãos dadas” com o exemplo anterior, pois como temos dois processamentos de alteração no banco, um após o outro, (debitar e atualizar) , se um deles falhar, teremos inconsistências nos dados, por exemplo:
 
-linha 1 :  conta.debite(valor); 
+linha 1:  conta.debite(valor); 
+
 linha 2:  contaDao.atualiza(conta);
 
 Na linha 1, estamos fazendo a operação de debitar da conta, isso faz com que o dado no banco já seja alterado, e na linha 2 temos mais uma operação, o problema é que existe a possibilidade de na hora de atualizar os dados, acontecer algum problema (servidor cair, aplicação fora do ar, etc.) e consequentemente os dados não seriam atualizados, causando inconsistência nos dados, e analogamente o método creditar() se comporta de maneira parecida.
