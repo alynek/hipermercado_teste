@@ -1,4 +1,4 @@
--- Verifica se o banco de dados existe antes de criá-lo
+-- Cria banco Hipermercado
 IF NOT EXISTS (SELECT 1 FROM sys.databases WHERE name = 'Hipermercado')
 BEGIN
     CREATE DATABASE Hipermercado;
@@ -14,7 +14,7 @@ GO
 USE Hipermercado;
 GO
 
--- Verifica e cria a tabela ElementoEstoque se não existir
+-- Cria a tabela ElementoEstoque 
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'ElementoEstoque')
 BEGIN
     CREATE TABLE ElementoEstoque (
@@ -31,7 +31,7 @@ BEGIN
 END
 GO
 
--- Verifica e cria a tabela Estoque se não existir
+-- Cria a tabela Estoque 
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'Estoque')
 BEGIN
     CREATE TABLE Estoque (
@@ -48,7 +48,7 @@ BEGIN
 END
 GO
 
--- Verifica e cria a tabela Alimento se não existir
+-- Cria a tabela Alimento
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'Alimento')
 BEGIN
     CREATE TABLE Alimento (
@@ -67,7 +67,7 @@ BEGIN
 END
 GO
 
--- Verifica e cria a tabela ProdutoLimpeza se não existir
+-- Cria a tabela ProdutoLimpeza 
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'ProdutoLimpeza')
 BEGIN
     CREATE TABLE ProdutoLimpeza (
@@ -86,7 +86,7 @@ BEGIN
 END
 GO
 
--- Verifica e cria a tabela PesquisaMercado se não existir
+-- Cria a tabela PesquisaMercado 
 IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'PesquisaMercado')
 BEGIN
     CREATE TABLE PesquisaMercado (
