@@ -29,6 +29,15 @@ var ruaDaSeda = new Rua("12345-678", "Rua da seda", casasDaRuaDaSeda);
 var ruaDoAco = new Rua("987654-321", "Rua do Aço", casasDaRuaDoAco);
 var ruaDaFarinha = new Rua("11111-212", "Rua da Farinha", casasDaRuaDaFarinha);
 
+
+ruaDaSeda.AdicionarCasa(new Casa() { Numero = 105, TotalEleitores = 20 });
+ruaDaSeda.AdicionarMuitasCasas(new HashSet<Casa>
+{
+    new() { Numero = 5, TotalEleitores = 2 },
+    new() { Numero = 2, TotalEleitores = 3 },
+    new() { Numero = 20, TotalEleitores = 1 },
+});
+
 var listaDeRuas = new List<Rua>() { ruaDaSeda, ruaDoAco, ruaDaFarinha };
 
 foreach (var item in listaDeRuas)
@@ -57,6 +66,21 @@ public class Rua
         Nome = nome;
         Casas = casas;
         QuantidadeEleitoresRuas = casas.Select(_ => _.TotalEleitores).Sum();
+    }
+
+    public void AdicionarCasa(Casa casa)
+    {
+        Casas.Add(casa);
+        QuantidadeEleitoresRuas += casa.TotalEleitores;
+    }
+
+    public void AdicionarMuitasCasas(HashSet<Casa> casas)
+    {
+        foreach (var item in casas)
+        {
+            Casas.Add(item);
+            QuantidadeEleitoresRuas += item.TotalEleitores;
+        }
     }
 
     public override bool Equals(object obj)
